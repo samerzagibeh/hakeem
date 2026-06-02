@@ -3,31 +3,23 @@ const fileInput = document.getElementById("fileInput");
 const resultBox = document.getElementById("result");
 console.log("JS Connected");
 
-// =====================
-// فتح اختيار الملفات
-// =====================
+
 dropArea.addEventListener("click", () => {
     fileInput.click();
 });
 
-// =====================
-// Drag Over
-// =====================
+
 dropArea.addEventListener("dragover", (e) => {
     e.preventDefault();
     dropArea.classList.add("dragover");
 });
 
-// =====================
-// Drag Leave
-// =====================
+
 dropArea.addEventListener("dragleave", () => {
     dropArea.classList.remove("dragover");
 });
 
-// =====================
-// Drop File
-// =====================
+
 dropArea.addEventListener("drop", (e) => {
     e.preventDefault();
     dropArea.classList.remove("dragover");
@@ -40,18 +32,14 @@ dropArea.addEventListener("drop", (e) => {
     }
 });
 
-// =====================
-// File input change
-// =====================
+
 fileInput.addEventListener("change", () => {
     if (fileInput.files.length) {
         showFile(fileInput.files[0]);
     }
 });
 
-// =====================
-// عرض اسم الملف
-// =====================
+
 function showFile(file) {
     dropArea.innerHTML = `
         <i class="fa-solid fa-file-circle-check"></i>
@@ -60,9 +48,7 @@ function showFile(file) {
     `;
 }
 
-// =====================
-// تحليل الملف (يرسل للباكند)
-// =====================
+
 
 
    async function analyzeReport() {
@@ -86,7 +72,7 @@ function showFile(file) {
         console.log("2");
 
         const response = await fetch(
-            "http://localhost:5000/api/analyze-file",
+            "https://hakeem-1.onrender.com/api/login",
             {
                 method: "POST",
                 body: formData
@@ -115,9 +101,6 @@ function showFile(file) {
         alert("خطأ في الاتصال بالسيرفر");
     }
 }
-// =====================
-// عرض النتيجة
-// =====================
 function showResult(text) {
 
     if (!resultBox) {
