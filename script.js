@@ -72,7 +72,7 @@ function showFile(file) {
         console.log("2");
 
         const response = await fetch(
-            "https://hakeem-1.onrender.com/api/login",
+            "https://hakeem-1.onrender.com/api/analyze-file",
             {
                 method: "POST",
                 body: formData
