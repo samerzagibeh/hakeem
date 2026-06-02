@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حكيم - AI Health Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        
+
+        <div class="header">
+
+            <h1>حكيم — AI Health Assistant</h1>
+
+            <p>
+                ارفع تقريرك الطبي وسيقوم الذكاء الاصطناعي بتحليله
+                وشرح الحالة بلغة بسيطة
+            </p>
+
+        </div>
+
+        
+
+        <div class="main-section">
+
+            
+
+            <div class="card">
+
+                <h2>رفع التقرير الطبي</h2>
+
+               <div class="upload-box" id="drop-area">
+
+    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+    <p>
+        اسحب الملف وضعه هنا
+    </p>
+
+    
+
+    <input type="file" id="fileInput" hidden>
+
+</div>
+
+                <button onclick="analyzeReport()">
+                    تحليل التقرير بالذكاء الاصطناعي
+                </button>
+
+            </div>
+
+           
+
+            <div class="card">
+
+                <h2 class="green">
+                    نتائج التحليل
+                </h2>
+
+               <div class="result-box" id="result">
+
+    <h3>نتيجة التحليل</h3>
+
+    <p>
+        بانتظار التحليل...
+    </p>
+
+</div>
+
+                <div class="result-box">
+
+                    <h3>شرح مبسط</h3>
+
+                    <p id="explanation">
+                        الحالة ليست خطيرة حالياً لكن تحتاج متابعة دورية.
+                    </p>
+
+                </div>
+
+                <div class="result-box">
+
+                    <h3>الطبيب المقترح</h3>
+
+                    <p class="doctor" id="doctor">
+                        طبيب باطنية / غدد صماء
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="features">
+
+            <div class="feature-card">
+
+                <div class="icon">🧠</div>
+
+                <h3>تحليل ذكي</h3>
+
+                <p>
+                    قراءة التقارير الطبية باستخدام الذكاء الاصطناعي
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon">📄</div>
+
+                <h3>تبسيط النتائج</h3>
+
+                <p>
+                    شرح طبي مبسط يفهمه جميع المستخدمين
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon">👨‍⚕️</div>
+
+                <h3>اقتراح الطبيب</h3>
+
+                <p>
+                    ترشيح التخصص المناسب حسب الحالة الصحية
+                </p>
+ 
+            </div>
+<div class="feature-card">
+
+    <div class="icon">👁️</div>
+
+   <font size="4"><h3>
+        وعي 
+    </h3>
+</font> 
+    <p>
+        نظام ذكاء اصطناعي يهدف إلى توعية المواطنين
+        بمخاطر المخدرات وتأثيرها على الفرد والمجتمع
+    </p>
+
+    <button class="wa3i-btn"
+        onclick="window.location.href='wa3i.html'">
+
+        الدخول للنظام
+
+    </button>
+
+
+   
+
+</div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
